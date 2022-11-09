@@ -9,7 +9,7 @@ const Services = () => {
         .then(data=> setservices(data))
     },[])
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 ml-12 mt-5 lg:grid-cols-3'>
+        <div className='grid grid-cols-1 md:grid-cols-2 ml-12 mb-5 lg:grid-cols-3'>
             {
                 services.map(service=> <ServicesDetailes
                 key={service}

@@ -1,8 +1,8 @@
 import React from 'react';
-import pic1 from '../assest/images/img.1.jpg';
-import pic2 from '../assest/images/pic.4.jpg';
-import pic3 from '../assest/images/react-pic.png';
-import pic4 from '../assest/images/react-pic.png';
+import pic1 from '../assest/images/cox.1.jpg';
+import pic2 from '../assest/images/cox.2.jpg';
+import pic3 from '../assest/images/cox.5.jpg';
+import pic4 from '../assest/images/image.saint.jpg';
 import Services from '../Services/Services';
 const Home = () => {
     return (
