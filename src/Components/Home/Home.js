@@ -3,9 +3,10 @@ import pic1 from '../assest/images/img.1.jpg';
 import pic2 from '../assest/images/pic.4.jpg';
 import pic3 from '../assest/images/react-pic.png';
 import pic4 from '../assest/images/react-pic.png';
+import Services from '../Services/Services';
 const Home = () => {
     return (
-        <div>
+            <div>
             <div className="carousel w-full mt-5 py-10">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src={pic1} className="w-full" />
@@ -36,7 +37,10 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <Services></Services>
         </div>
+        
+       
     );
 };
 
