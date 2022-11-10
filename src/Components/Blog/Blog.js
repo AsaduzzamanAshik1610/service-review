@@ -12,7 +12,7 @@ const Blog = () => {
               NodeJS is a cross-platform and opensource Javascript runtime environment  that allows the javascript to be run on the server-side. Nodejs allows Javascript code to run outside the browser. Nodejs comes with a lot of modules and mostly used in web development.
               2. JavaScript : 
               Javascript is a Scripting language. It is mostly abbreviated as JS. It can be said that Javascript is the updated version of the ECMA script. Javascript is a high-level programming language that uses the concept of Oops but it is based on prototype. 
-              <h1 className='text-2xl mt-5 text-white'>How does NodeJS handle multiple requests at the same time?</h1> 
+              <h1 className='text-2xl mt-5 text-white'>4.How does NodeJS handle multiple requests at the same time?</h1> 
               <p className='p-5 m-5 text-white'>How NodeJS handle multiple client requests? NodeJS receives multiple client requests and places them into EventQueue. NodeJS is built with the concept of event-driven architecture. NodeJS has its own EventLoop which is an infinite loop that receives requests and processes them.I can not understand (yet) how it can be faster than a multi-threaded web server. I understand that multi-threaded web server will be more expensive in resources (memory, CPU), but would not it still be faster? I am probably wrong; please explain how this single-thread is faster in lots of requests, and what it typically does (in high level) when servicing lots of requests like 10,000.</p>
               </p>
         </div>
