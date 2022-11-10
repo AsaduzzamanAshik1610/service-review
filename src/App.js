@@ -5,6 +5,7 @@ import Login from './Components/Login/Login';
 import Main from './Components/Main/Main';
 import Register from './Components/Register/Register';
 import Blog from './Components/Blog/Blog';
+import TravelDetails from './Components/TravelDetails/TravelDetails';
 function App() {
   const router = createBrowserRouter([
          {
@@ -26,6 +27,11 @@ function App() {
              {
               path:'/blog',
               element:<Blog></Blog>
+             },
+             {
+              path:'/services/:id',
+              element:<TravelDetails></TravelDetails>,
+              loader:({params})=> fetch(`http://localhost:5000/services/${params.id}`)
              }
           ]
          }
