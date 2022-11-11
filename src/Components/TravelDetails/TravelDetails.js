@@ -23,7 +23,7 @@ const TravelDetails = () => {
             name
         }
         console.log(reviews)
-        fetch('http://localhost:5000/review', {
+        fetch('https://b6a11-service-review-server-side-asaduzzaman-ashik1610.vercel.app/review', {
             method:'POST',
             headers:{
                 'content-type': 'application/json'
