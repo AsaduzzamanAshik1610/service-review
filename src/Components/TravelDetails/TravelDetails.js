@@ -4,6 +4,14 @@ import { useLoaderData } from 'react-router-dom';
 const TravelDetails = () => {
     const user = useLoaderData()
     const { _id, img, title, description, price } = user;
+    const handleAddUser = event => {
+        event.preventDefault()
+        const form = event.target;
+        const name = form.name.value;
+        const address = form.address.value;
+        const email = form.email.value;
+        console.log(name, address, email);
+    }
     return (
         <div className='mt-5'>
             <div className="card w-64 bg-base-100 mx-auto shadow-xl">
@@ -16,6 +24,18 @@ const TravelDetails = () => {
             <div className='bg-current	m-5 rounded-lg'>
                 <p className='p-5 m-5 text-white'>Description:{description}</p>
             </div>
+            <form onSubmit={handleAddUser} className='bg-red-600 p-5 m-5 rounded-lg'>
+                <h2 className='text-4xl text-black'>You are about to review: {title}</h2>
+                <h4 className='text-3xl text-orange-200'>Price:{price}</h4>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+                    <input name="firstName" type="text" placeholder="First Name" className="input input-bordered text-black bg-white w-full max" />
+                    <input name="lastName" type="text" placeholder="Last Name" className="input input-bordered text-black bg-white w-full max" />
+                    <input name="phone" type="text" placeholder="Your Phone" required className="input input-bordered text-black bg-white w-full max" />
+                    <input name="email" type="text" placeholder="Your Email" defaultValue={user?.email} className="input input-bordered text-black bg-white w-full max" />
+                </div>
+                <textarea name='message' className="textarea textarea-bordered h-24 w-full mt-3 bg-white text-black" placeholder="please your message" required></textarea>
+                <button className='bg-primary p-3 rounded text-white'>Review</button>
+            </form>
         </div>
     );
 };

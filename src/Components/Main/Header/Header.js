@@ -9,7 +9,7 @@ const Header = () => {
          <h4 className='text-white mr-3'>Tour Bangladesh</h4>
          <Link className='mr-5' to='/'>Home</Link>
          <Link className='mr-3' to='/login'>Login</Link>
-         <Link to='/blog'>Blog</Link>
+         <Link className='mr-3' to='/blog'>Blog</Link>
          <Link to='/services'>Services</Link>
        </div>
     </div>

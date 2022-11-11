@@ -2,10 +2,9 @@ import React, { useEffect, useState } from 'react';
 import ServicesDetailes from '../ServicesDetailes/ServicesDetailes';
 
 const Allservices = () => {
-  
     const [services, setservices] = useState([]);
     useEffect(()=>{
-       fetch('http://localhost:5000/services')
+       fetch('https://b6a11-service-review-server-side-asaduzzaman-ashik1610.vercel.app/services')
            .then(res => res.json())
            .then(data => setservices(data))
    },[])
