@@ -7,10 +7,18 @@ const TravelDetails = () => {
     const handleAddUser = event => {
         event.preventDefault()
         const form = event.target;
-        const name = form.name.value;
-        const address = form.address.value;
-        const email = form.email.value;
-        console.log(name, address, email);
+        const name = `${form.firstName.value} ${form.lastName.value}`;
+        const email = user?.email || 'unregistered';
+        const phone = form.phone.value;
+        const message = form.message.value;
+
+        const review = {
+            service:_id,
+            serviceName:title,
+            email,
+            phone,
+            message
+        }
     }
     return (
         <div className='mt-5'>
