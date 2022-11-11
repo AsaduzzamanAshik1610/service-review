@@ -5,6 +5,7 @@ import pic2 from '../assest/images/cox.2.jpg';
 import pic3 from '../assest/images/cox.5.jpg';
 import pic4 from '../assest/images/image.saint.jpg';
 import Services from '../Services/Services';
+import Travelpart from '../Travelpart/Travelpart';
 const Home = () => {
     return (
             <div>
@@ -42,6 +43,7 @@ const Home = () => {
             <Link to='/services'>
             <button className='bg-warning p-3 rounded-lg text-white'>seall service</button>
             </Link>
+            <Travelpart></Travelpart>
         </div>
         
        

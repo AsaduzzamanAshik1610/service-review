@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { Authcontext } from '../Context/Authprovider';
 
 const TravelDetails = () => {
-    const user = useLoaderData()
-    const { _id, img, title, description, price } = user;
+    const userDetail = useLoaderData()
+    const {user} = useContext(Authcontext)
+    const { _id, img, title, description, price } = userDetail;
     const handleAddUser = event => {
         event.preventDefault()
         const form = event.target;
@@ -17,11 +19,13 @@ const TravelDetails = () => {
             serviceName:title,
             email,
             phone,
-            message
+            message,
+            name
         }
+        console.log(reviews)
         fetch('http://localhost:5000/review', {
             method:'POST',
-            header:{
+            headers:{
                 'content-type': 'application/json'
             },
             body:JSON.stringify(reviews)
