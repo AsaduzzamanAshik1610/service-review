@@ -12,13 +12,30 @@ const TravelDetails = () => {
         const phone = form.phone.value;
         const message = form.message.value;
 
-        const review = {
+        const reviews = {
             service:_id,
             serviceName:title,
             email,
             phone,
             message
         }
+        fetch('http://localhost:5000/review', {
+            method:'POST',
+            header:{
+                'content-type': 'application/json'
+            },
+            body:JSON.stringify(reviews)
+        })
+        .then(res=> res.json())
+        .then(data=>{
+            console.log(data)
+            if(data.acknowledged){
+                alert('review placed successfully')
+                form.reset();
+            }
+        })
+        .catch(er=> console.log(er))
+
     }
     return (
         <div className='mt-5'>

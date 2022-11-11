@@ -7,6 +7,7 @@ import Register from './Components/Register/Register';
 import Blog from './Components/Blog/Blog';
 import TravelDetails from './Components/TravelDetails/TravelDetails';
 import Allservices from './Components/Allservices/Allservices';
+import Review from './Components/Review/Review';
 function App() {
   const router = createBrowserRouter([
          {
@@ -37,6 +38,10 @@ function App() {
              {
               path:'/services',
               element:<Allservices></Allservices>
+             },
+             {
+              path:'/review',
+              element:<Review></Review>
              }
           ]
          }
