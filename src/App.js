@@ -6,6 +6,8 @@ import Main from './Components/Main/Main';
 import Register from './Components/Register/Register';
 import Blog from './Components/Blog/Blog';
 import TravelDetails from './Components/TravelDetails/TravelDetails';
+import Allservice from './Components/Allservice/Allservice';
+import Allservices from './Components/Allservices/Allservices';
 function App() {
   const router = createBrowserRouter([
          {
@@ -32,6 +34,10 @@ function App() {
               path:'/services/:id',
               element:<TravelDetails></TravelDetails>,
               loader:({params})=> fetch(`http://localhost:5000/services/${params.id}`)
+             },
+             {
+              path:'/services',
+              element:<Allservices></Allservices>
              }
           ]
          }

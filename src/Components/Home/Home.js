@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import pic1 from '../assest/images/cox.1.jpg';
 import pic2 from '../assest/images/cox.2.jpg';
 import pic3 from '../assest/images/cox.5.jpg';
@@ -38,6 +39,9 @@ const Home = () => {
                 </div>
             </div>
             <Services></Services>
+            <Link to='/services'>
+            <button className='bg-warning p-3 rounded-lg text-white'>seall service</button>
+            </Link>
         </div>
         
        

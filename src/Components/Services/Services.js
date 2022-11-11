@@ -4,7 +4,7 @@ import ServicesDetailes from '../ServicesDetailes/ServicesDetailes';
 const Services = () => {
     const [services, setservices] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/services')
+        fetch('http://localhost:5000/services/upcoming')
         .then(res=>res.json())
         .then(data=> setservices(data))
     },[])
